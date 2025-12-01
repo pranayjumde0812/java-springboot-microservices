@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.app</groupId>
-    <artifactId>ecom-application-pgsql</artifactId>
+    <artifactId>ecom-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ecom-application</name>
     <description>E-Com application</description>
