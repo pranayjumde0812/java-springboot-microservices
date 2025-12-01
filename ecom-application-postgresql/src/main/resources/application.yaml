@@ -1,33 +1,21 @@
-#spring.h2.console.enabled=true
-#spring.datasource.url=jdbc:h2:mem:test
-#spring.jpa.show-sql=true
-#spring.jpa.hibernate.ddl-auto=update
-
 spring:
   application:
     name: ecom-app
+
   datasource:
     url: jdbc:postgresql://localhost:5432/ecom-db
     username: admin
     password: admin
+
   jpa:
     database: postgresql
     show-sql: true
     hibernate:
-          ddl-auto: update
+      ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-#  h2:
-#    console:
-#      enabled: true
-#
-#  datasource:
-#    url: jdbc:h2:mem:test
-#
-#  jpa:
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
+    properties:
+      hibernate.jdbc.time_zone: "Asia/Kolkata"
 
 management:
   endpoints:
