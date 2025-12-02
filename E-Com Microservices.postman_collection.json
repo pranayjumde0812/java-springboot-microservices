@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "2b4db38d-bd0e-4803-a8c2-bd81b5af779e",
+		"name": "E-Com Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39148785"
+	},
+	"item": [
+		{
+			"name": "CRUD- First App",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "get Users",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 123",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create user",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "oauth2-pkce",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8443/realms/ecom-app/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8443/realms/ecom-app/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "oauth-ecom-micro",
+											"type": "string"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "http://localhost:5173",
+											"type": "string"
+										},
+										{
+											"key": "useBrowser",
+											"value": false,
+											"type": "boolean"
+										},
+										{
+											"key": "challengeAlgorithm",
+											"value": "S256",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "authorization_code_with_pkce",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid profile roles email",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 123",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Pranay\",\n    \"lastName\": \"Jumde\",\n    \"email\": \"pranay.jumde.qq@gmail.com\",\n    \"phoneNumber\": \"9309916554\",\n    \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"New York\",\n        \"state\": \"NY\",\n        \"country\": \"USA\",\n        \"zipcode\": \"10001\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user by id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "oauth2-pkce",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8443/realms/ecom-app/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8443/realms/ecom-app/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "oauth-ecom-micro",
+											"type": "string"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "http://localhost:5173",
+											"type": "string"
+										},
+										{
+											"key": "useBrowser",
+											"value": false,
+											"type": "boolean"
+										},
+										{
+											"key": "challengeAlgorithm",
+											"value": "S256",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "authorization_code_with_pkce",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "openid profile roles email",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 123",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/user/3",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"3"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"firstName\": \"Supriya\",\n    \"lastName\": \"Godse\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"iPhone 16 Pro\",\r\n    \"description\": \"Latest iPhone with amazing features\",\r\n    \"price\": 1099.99,\r\n    \"stockQuantity\": 50,\r\n    \"category\": \"Electronics\",\r\n    \"imageUrl\": \"https://placehold.co/600x400\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"iPhone 16 Pro Updated\",\r\n    \"description\": \"Latest iPhone with amazing features\",\r\n    \"price\": 1111.99,\r\n    \"stockQuantity\": 90,\r\n    \"category\": \"Electronics\",\r\n    \"imageUrl\": \"https://placehold.co/600x400\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Products By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Products",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "keyword",
+											"value": "17",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/search?keyword=17",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "17"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Add Product to Cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-User-ID",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\": \"1\",\r\n    \"quantity\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/cart",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Cart",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-User-ID",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/cart/items",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"cart",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-User-ID",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/cart/items/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"cart",
+										"items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Create Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-User-ID",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/orders",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
