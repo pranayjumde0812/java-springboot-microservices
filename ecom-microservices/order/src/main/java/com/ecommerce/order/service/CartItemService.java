@@ -7,6 +7,7 @@ import com.ecommerce.order.repository.CartItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -21,14 +22,14 @@ public class CartItemService {
 
         if (exitingcartItem != null) {
             exitingcartItem.setQuantity(exitingcartItem.getQuantity() + cartItemRequest.getQuantity());
-//            exitingcartItem.setPrice(product.getPrice().multiply(BigDecimal.valueOf(exitingcartItem.getQuantity())));
+            exitingcartItem.setPrice(BigDecimal.valueOf(100.00));
             cartItemRepository.save(exitingcartItem);
         } else {
             CartItem cartItem = new CartItem();
             cartItem.setUserId(Long.valueOf(userId));
             cartItem.setProductId(cartItemRequest.getProductId());
             cartItem.setQuantity(cartItemRequest.getQuantity());
-//            cartItem.setPrice(product.getPrice().multiply(BigDecimal.valueOf(cartItemRequest.getQuantity())));
+            cartItem.setPrice(BigDecimal.valueOf(100.00));
             cartItemRepository.save(cartItem);
         }
 
@@ -37,29 +38,32 @@ public class CartItemService {
 
     public boolean removeItemFromCart(String userId, Long productId) {
 
-        cartItemRepository.deleteByUserIdAndProductId(Long.valueOf(userId), productId);
-        return true;
-
+        CartItem cartItem = cartItemRepository.findByUserIdAndProductId(Long.valueOf(userId), productId);
+        if (cartItem != null) {
+            cartItemRepository.delete(cartItem);
+            return true;
+        }
+        return false;
     }
 
     public List<CartItemResponse> getAllCartItems(String userId) {
-
 
         return cartItemRepository.findByUserId(Long.valueOf(userId))
                 .stream()
                 .map(this::mapToUCartItemsResponse)
                 .toList();
-
-
     }
 
     public List<CartItem> getCartItems(String userId) {
 
-            return cartItemRepository.findByUserId(Long.valueOf(userId))
-                    .stream()
-                    .toList();
+        return cartItemRepository.findByUserId(Long.valueOf(userId))
+                .stream()
+                .toList();
 
+    }
 
+    public void clearCart(String userId) {
+        cartItemRepository.deleteByUserId(Long.valueOf(userId));
     }
 
     private CartItemResponse mapToUCartItemsResponse(CartItem cartItem) {
@@ -68,15 +72,10 @@ public class CartItemService {
         response.setId(cartItem.getId().toString());
         response.setQuantity(cartItem.getQuantity());
         response.setPrice(cartItem.getPrice());
-//        response.setUserName(cartItem.getUser().getFirstName());
-//        response.setUserId(cartItem.getUser().getId().toString());
-//        response.setProductName(cartItem.getProduct().getName());
-//        response.setProductId(cartItem.getProduct().getId().toString());
+        response.setUserId(cartItem.getUserId().toString());
+        response.setProductId(cartItem.getProductId().toString());
 
         return response;
     }
 
-    public void clearCart(String userId) {
-//        userRepository.findById(Long.valueOf(userId)).ifPresent(cartItemRepository::deleteByUser);
-    }
 }
