@@ -2,20 +2,25 @@ spring:
   application:
     name: user-service
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/ecom-user
-    username: admin
-    password: admin
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/userdb
+      database: userdb
 
-  jpa:
-    database: postgresql
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-    properties:
-      hibernate.jdbc.time_zone: "Asia/Kolkata"
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/ecom-user
+#    username: admin
+#    password: admin
+#
+#  jpa:
+#    database: postgresql
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#
+#    properties:
+#      hibernate.jdbc.time_zone: "Asia/Kolkata"
 
 #  h2:
 #    console:
