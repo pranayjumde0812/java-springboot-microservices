@@ -2,12 +2,12 @@ spring:
   application:
     name: config-demo
 
-  profiles:
-    active: prod
+#  profiles:
+#    active: dev
 
 
-#build:
-#  id: 101
-#  version: 1.2.3
-#  name: "Default Build"
-#  type: "Default Build"
+build:
+  id: { ID }
+  version: { VERSION }
+  name: { NAME }
+  type: { TYPE }

@@ -1,5 +1,5 @@
 build:
-  id: 101
-  version: 1.2.3
-  name: "Development Build"
-  type: "Development Build"
+  id: { ID }
+  version: { VERSION }
+  name: { NAME }
+  type: { TYPE }
