@@ -1,5 +1,6 @@
 package com.info.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,17 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BuildInfoController {
 
-    @Value("${build.id}")
-    private String buildId;
+//    @Value("${build.id}")
+//    private String buildId;
+//
+//    @Value("${build.version}")
+//    private String buildVersion;
+//
+//    @Value("${build.name}")
+//    private String buildName;
 
-    @Value("${build.version}")
-    private String buildVersion;
-
-    @Value("${build.name}")
-    private String buildName;
+    @Autowired
+    private BuildInfo buildInfo;
 
     @GetMapping("/build-info")
     public String getBuildInfo() {
-        return "BuildId =" + buildId + " BuildVersion =" + buildVersion + " BuildName =" + buildName;
+        return "BuildId =" + buildInfo.getId() + " BuildVersion =" + buildInfo.getVersion() + " BuildName =" + buildInfo.getName();
     }
 }
