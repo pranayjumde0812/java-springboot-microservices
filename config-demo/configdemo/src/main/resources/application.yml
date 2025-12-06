@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-demo
+
+  profiles:
+    active: prod
+
+
+#build:
+#  id: 101
+#  version: 1.2.3
+#  name: "Default Build"
+#  type: "Default Build"
