@@ -4,6 +4,7 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/ecom-product
+#    url: jdbc:mysql://localhost:3306/ecom-product
     username: admin
     password: admin
 
