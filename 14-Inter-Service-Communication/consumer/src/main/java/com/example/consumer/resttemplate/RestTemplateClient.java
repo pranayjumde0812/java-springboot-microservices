@@ -1,4 +1,4 @@
-package com.example.consumer.service;
+package com.example.consumer.resttemplate;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
