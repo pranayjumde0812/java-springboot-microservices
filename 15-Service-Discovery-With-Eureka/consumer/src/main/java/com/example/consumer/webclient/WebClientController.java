@@ -17,16 +17,6 @@ public class WebClientController {
     @GetMapping("/instance")
     public Mono<String> getInstance() {
 
-//        WebClient webClient = WebClient.create();
-//
-//        Mono<String> response = webClient.get()
-//                .uri("http://localhost:8081/instance-info")
-//                .retrieve()
-//                .bodyToMono(String.class);
-//
-//
-//        return response;
-
         return providerWebClient.getInstanceInfo();
     }
 }
