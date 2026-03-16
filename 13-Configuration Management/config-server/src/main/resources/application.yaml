@@ -9,3 +9,5 @@ spring:
       server:
         git:
           uri: https://github.com/pranayjumde0812/app-configuration-java-springboot
+          username: ${GIT_USER}
+          password: ${GIT_TOKEN}
