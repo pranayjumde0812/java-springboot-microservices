@@ -8,6 +8,12 @@ spring:
   profiles:
     active: prod
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
 build:
   id: { ID }
   version: { VERSION }
