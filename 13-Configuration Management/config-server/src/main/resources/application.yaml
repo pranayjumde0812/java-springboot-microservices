@@ -25,3 +25,22 @@ spring:
 #          uri: https://github.com/pranayjumde0812/app-configuration-java-springboot
 #          username: ${GIT_USER}
 #          password: ${GIT_TOKEN}
+
+#encrypt:
+#  key: "0E329232EA6D0D73"
+
+#  keytool -genkeypair -alias config-server-key -keyalg RSA -dname "CN=Config Server,OU=Spring Cloud,O=Company" -keypass mypass -keystore config-server.jks -storepass mypass
+
+#  keytool -genkeypair \
+#  -alias config-server-key \
+#  -keyalg RSA \
+#  -dname "CN=Config Server,OU=Spring Cloud,O=Company" \
+#  -keypass mypass \
+#  -keystore /home/admin1/JAVA/java-springboot-microservices/13-Configuration\ Management/config-server/src/main/resources/config-server.jks \
+#  -storepass mypass
+
+encrypt:
+  key-store:
+    location: config-server.jks
+    password: mypass
+    alias: config-server-key
