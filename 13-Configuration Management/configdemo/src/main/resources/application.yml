@@ -8,15 +8,13 @@ spring:
   profiles:
     active: dev
 
+  cloud:
+    bus:
+      enabled: true
+
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
-
-build:
-  id: { ID }
-  version: { VERSION }
-  name: { NAME }
-  type: { TYPE }
+        include: "*"
 

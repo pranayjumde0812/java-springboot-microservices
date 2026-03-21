@@ -4,19 +4,40 @@ server:
 spring:
   application:
     name: configserver
+#  profiles:
+#    active: jdbc
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/configdb
+#    username: root
+#    password: admin
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  cloud:
+#    config:
+#      server:
+#        jdbc:
+#          sql: "SELECT PROP_KEY, PROP_VALUE FROM PROPERTIES WHERE APPLICATION=? AND PROFILE=? AND LABEL=?"
+#          default-label: main
   profiles:
-    active: jdbc
-  datasource:
-    url: jdbc:mysql://localhost:3306/configdb
-    username: root
-    password: admin
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    active: native
   cloud:
     config:
       server:
-        jdbc:
-          sql: "SELECT PROP_KEY, PROP_VALUE FROM PROPERTIES WHERE APPLICATION=? AND PROFILE=? AND LABEL=?"
-          default-label: main
+        native:
+          search-locations: file:///home/admin1/JAVA/java-springboot-microservices/13-Configuration Management/config-server/src/main/resources/config
+    bus:
+      enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 #  cloud:
 #    config:

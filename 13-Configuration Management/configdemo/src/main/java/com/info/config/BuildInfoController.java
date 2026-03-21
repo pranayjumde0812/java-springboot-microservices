@@ -10,15 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class BuildInfoController {
 
-//    @Value("${build.id}")
-//    private String buildId;
-//
-//    @Value("${build.version}")
-//    private String buildVersion;
-//
-//    @Value("${build.name}")
-//    private String buildName;
-
     @Autowired
     private BuildInfo buildInfo;
 

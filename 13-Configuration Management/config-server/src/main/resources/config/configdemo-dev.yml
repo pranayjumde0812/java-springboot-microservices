@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+build:
+  id: 10110
+  version: 1.2.3.4
+  name: "Native Dev-Production-Build"
+  type: "Native Development"

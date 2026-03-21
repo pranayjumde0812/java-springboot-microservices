@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: configdemo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+build:
+  id: 10110
+  version: 1.2.3.4
+  name: "Native Default-Production-Build"
+  type: "Native Default"
+
