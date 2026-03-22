@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ecom-order
-    username: admin
-    password: admin
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
   jpa:
     database: postgresql
