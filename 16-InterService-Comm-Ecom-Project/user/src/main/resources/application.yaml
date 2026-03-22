@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: user-service
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+
+
+
+
+
+
+
+
+
+
+
+
+####### Old Configs ####
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/userdb
+#      database: userdb
+#
+##  datasource:
+##    url: jdbc:postgresql://localhost:5432/ecom-user
+##    username: admin
+##    password: admin
+##
+##  jpa:
+##    database: postgresql
+##    show-sql: true
+##    hibernate:
+##      ddl-auto: update
+##    database-platform: org.hibernate.dialect.PostgreSQLDialect
+##
+##    properties:
+##      hibernate.jdbc.time_zone: "Asia/Kolkata"
+#
+##  h2:
+##    console:
+##      enabled: true
+##  datasource:
+##    url: jdbc:h2:mem:test
+##  jpa:
+##    show-sql: true
+##    hibernate:
+##      ddl-auto: update
+#
+#server:
+#  port: 8082
+
+
