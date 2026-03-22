@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33260013-7004-47fb-86ba-ce07234b27a1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../15-Service-Discovery-With-Eureka/consumer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../15-Service-Discovery-With-Eureka/consumer/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16-InterService-Comm-Ecom-Project/order/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../16-InterService-Comm-Ecom-Project/order/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coding-Practice/Arrays/src/programming/BigNumberSmallNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coding-Practice/Arrays/src/programming/CountOccurrence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coding-Practice/Arrays/src/programming/DeleteOnSpecifiedIndexArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coding-Practice/Arrays/src/programming/FstBigSecBig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Job Application/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Job Application/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecom-application-postgresql/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom-application-postgresql/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecom-application-postgresql/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom-application-postgresql/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecom-microservices-with-mongo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom-microservices-with-mongo/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecom-microservices-with-mongo/order/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom-microservices-with-mongo/order/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pranayjumde0812&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pranayjumde0812/java-springboot-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;17851f10-eb84-4aec-931a-f9df795ac6c4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="36aqjEkYkzzGvTZKeXE2SGzVHF6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConfigDemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/admin1/JAVA/java-springboot-microservices/13-Configuration Management&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ConfigDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/configdemo/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="com.info.config.ConfigDemoApplication" />
+      <module name="configdemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.info.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ConfigDemoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33260013-7004-47fb-86ba-ce07234b27a1" name="Changes" comment="" />
+      <created>1765255163045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765255163045</updated>
+    </task>
+    <servers />
+  </component>
+</project>

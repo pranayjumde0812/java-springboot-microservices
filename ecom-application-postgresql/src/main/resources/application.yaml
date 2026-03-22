@@ -3,7 +3,7 @@ spring:
     name: ecom-app
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecom-db
+    url: jdbc:postgresql://localhost:5431/ecom-db
     username: admin
     password: admin
 
