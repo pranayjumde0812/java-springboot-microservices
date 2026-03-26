@@ -90,4 +90,12 @@ public class ProductService {
                 .map(this::updateProductToProductResponse)
                 .collect(Collectors.toList());
     }
+
+    public ProductResponse getProductById(String productId) {
+        ProductResponse productResponse = productRepository.findById(Long.valueOf(productId))
+                .map(this::updateProductToProductResponse)
+                .orElseThrow();
+
+        return productResponse;
+    }
 }
