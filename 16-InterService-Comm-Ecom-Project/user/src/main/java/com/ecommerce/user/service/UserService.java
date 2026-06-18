@@ -37,11 +37,11 @@ public class UserService {
 //        return userList.stream()
 //                .filter(user -> user.getId().equals(userId))
 //                .findFirst();
-        return userRepository.findById()
+        return userRepository.findById(userId)
                 .map(this::mapToUserResponse);
     }
 
-    public boolean updateUserById(UserRequest updateUserRequest, Long userId) {
+    public boolean updateUserById(UserRequest updateUserRequest, String userId) {
 //        return userList.stream()
 //                .filter(user -> user.getId().equals(userId))
 //                .findFirst()

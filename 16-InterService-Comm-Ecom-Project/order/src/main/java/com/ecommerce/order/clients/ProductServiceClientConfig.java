@@ -1,5 +1,6 @@
 package com.ecommerce.order.clients;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,21 +12,19 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 import java.util.Optional;
 
 @Configuration
+@RequiredArgsConstructor
 public class ProductServiceClientConfig {
 
-    @Bean
-    @LoadBalanced
-    public RestClient.Builder restClientBuilder() {
-        return RestClient.builder();
-    }
+    private final RestClient.Builder restClientBuilder;
 
     @Bean
-    public ProductServiceClient restClientInterface(RestClient.Builder restClientbuilder) {
-        RestClient restClient = restClientbuilder
+    public ProductServiceClient productServiceClient() {
+
+        RestClient restClient = restClientBuilder
                 .baseUrl("http://product-service")
                 .defaultStatusHandler(
                         HttpStatusCode::is4xxClientError,
-                        ((request, response) -> Optional.empty())
+                        (request, response) -> Optional.empty()
                 )
                 .build();
 
