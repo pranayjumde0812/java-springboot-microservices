@@ -11,6 +11,6 @@ public class UserResponse {
     private String lastName;
     private String email;
     private String phoneNumber;
-//    private UserRole role;
-//    private AddressDTO address;
+    private UserRole role;
+    private AddressDTO address;
 }
