@@ -47,7 +47,7 @@ public class ProductService {
     }
 
     public Optional<ProductResponse> getProductById(Long productId) {
-        return productRepository.findById(productId)
+        return productRepository.findByIdAndIsActiveTrue(productId)
                 .map(this::updateProductToProductResponse);
     }
 

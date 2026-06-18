@@ -33,11 +33,11 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public Optional<UserResponse> getUserById(Long userId) {
+    public Optional<UserResponse> getUserById(String userId) {
 //        return userList.stream()
 //                .filter(user -> user.getId().equals(userId))
 //                .findFirst();
-        return userRepository.findById(userId)
+        return userRepository.findById()
                 .map(this::mapToUserResponse);
     }
 
