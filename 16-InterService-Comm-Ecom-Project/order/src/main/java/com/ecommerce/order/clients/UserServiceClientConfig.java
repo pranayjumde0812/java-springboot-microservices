@@ -1,7 +1,6 @@
 package com.ecommerce.order.clients;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatusCode;
@@ -18,7 +17,7 @@ public class UserServiceClientConfig {
     private final RestClient.Builder restClientbuilder;
 
     @Bean
-    public UserServiceClient restClientInterface() {
+    public UserServiceClient userServiceClient() {
         RestClient restClient = restClientbuilder
                 .baseUrl("http://user-service")
                 .defaultStatusHandler(
